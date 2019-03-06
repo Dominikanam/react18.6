@@ -4,7 +4,7 @@
   "description": "https://dominikanam.github.io/",
   "main": "index.js",
   "scripts": {
-	"start": "npm run watch",
+    "start": "npm run watch",
     "test": "npm-run-all test:*",
     "test:html": "globstar nu-html-checker *.html",
     "init-project": "npm install && npm-run-all init:*",
