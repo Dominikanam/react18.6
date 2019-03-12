@@ -39,12 +39,15 @@ var Counter = React.createClass({
 	},
 
     render: function() {
-		var items = new Array(this.state.counter + 1);
+		var items = '';
+		for(var i = 0; i < this.state.counter; i++) {
+			items += this.props.emoji
+		}
 
 		return React.createElement('div', {},
 			React.createElement('button', {onClick: this.decrement}, '-'),
 			React.createElement('button', {onClick: this.increment}, '+'),
-			React.createElement('span', {}, items.join(this.props.emoji))
+			React.createElement('span', {}, items)
         );
     }
 });
